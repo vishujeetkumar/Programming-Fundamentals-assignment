@@ -1,0 +1,24 @@
+<form id="loginForm">
+    <input id="username" type="text" placeholder="USERNAME">
+    <input id="password" type="password" placeholder="password" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    const username = "admin";
+    const password = "12345";
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const userid = document.getElementById("username").value;  // ← .value
+        const pass   = document.getElementById("password").value;   // ← .value
+
+        if (username === userid && password === pass) {
+            alert("Login Successfully 🎉");
+            window.location.href = "https://vasmustore.free.nf/";   // ← redirect here
+        } else {
+            alert("Enter Correct Details");
+        }
+    });
+</script>   
